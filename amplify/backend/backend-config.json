@@ -1,0 +1,43 @@
+{
+  "api": {
+    "getlive": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "Name",
+            "Arn"
+          ],
+          "category": "function",
+          "resourceName": "getlivelambda"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "API Gateway"
+    }
+  },
+  "function": {
+    "getlivelambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_getlivelambda_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getlivelambda"
+        }
+      ]
+    },
+    "AMPLIFY_function_getlivelambda_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "getlivelambda"
+        }
+      ]
+    }
+  }
+}
