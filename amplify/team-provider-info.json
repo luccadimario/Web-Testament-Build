@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-webtestament-dev-121408-authRole",
+      "UnauthRoleArn": "arn:aws:iam::753219969623:role/amplify-webtestament-dev-121408-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::753219969623:role/amplify-webtestament-dev-121408-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-webtestament-dev-121408-deployment",
+      "UnauthRoleName": "amplify-webtestament-dev-121408-unauthRole",
+      "StackName": "amplify-webtestament-dev-121408",
+      "StackId": "arn:aws:cloudformation:us-east-1:753219969623:stack/amplify-webtestament-dev-121408/35f23710-6851-11ee-aaa8-12605419d481",
+      "AmplifyAppId": "d3705c1jlsb8p3"
+    },
+    "categories": {
+      "function": {
+        "getlivelambda": {
+          "deploymentBucketName": "amplify-webtestament-dev-121408-deployment",
+          "s3Key": "amplify-builds/getlivelambda-5136766e70694f72724b-build.zip"
+        }
+      },
+      "api": {
+        "getlive": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d3705c1jlsb8p3",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

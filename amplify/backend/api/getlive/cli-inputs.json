@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "paths": {
+    "/live": {
+      "name": "/live",
+      "lambdaFunction": "getlivelambda",
+      "permissions": {
+        "setting": "open"
+      }
+    }
+  }
+}
