@@ -5,9 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import "./styles.css";
 import { Auth0Provider } from '@auth0/auth0-react';
-import {Amplify} from 'aws-amplify';
-import awsExports from './aws-exports'
-Amplify.configure(awsExports);
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN;
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID;
