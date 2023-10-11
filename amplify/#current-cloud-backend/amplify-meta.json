@@ -1,0 +1,84 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-webtestament-dev-121408-authRole",
+      "UnauthRoleArn": "arn:aws:iam::753219969623:role/amplify-webtestament-dev-121408-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::753219969623:role/amplify-webtestament-dev-121408-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-webtestament-dev-121408-deployment",
+      "UnauthRoleName": "amplify-webtestament-dev-121408-unauthRole",
+      "StackName": "amplify-webtestament-dev-121408",
+      "StackId": "arn:aws:cloudformation:us-east-1:753219969623:stack/amplify-webtestament-dev-121408/35f23710-6851-11ee-aaa8-12605419d481",
+      "AmplifyAppId": "d3705c1jlsb8p3"
+    }
+  },
+  "function": {
+    "getlivelambda": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "lastBuildTimeStamp": "2023-10-11T16:28:15.555Z",
+      "lastBuildType": "PROD",
+      "lastPackageTimeStamp": "2023-10-11T16:28:16.151Z",
+      "distZipFilename": "getlivelambda-5136766e70694f72724b-build.zip",
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-webtestament-dev-121408-deployment",
+        "s3Key": "amplify-builds/getlivelambda-5136766e70694f72724b-build.zip"
+      },
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-webtestament-dev-121408-deployment/amplify-cfn-templates/function/getlivelambda-cloudformation-template.json",
+        "logicalId": "functiongetlivelambda"
+      },
+      "lastPushTimeStamp": "2023-10-11T16:44:53.275Z",
+      "output": {
+        "LambdaExecutionRoleArn": "arn:aws:iam::753219969623:role/webtestamentLambdaRole921cbbe3-dev",
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:753219969623:function:getlivelambda-dev",
+        "Name": "getlivelambda-dev",
+        "LambdaExecutionRole": "webtestamentLambdaRole921cbbe3-dev"
+      },
+      "lastPushDirHash": "emUYosGxjk9dKrbtmPZ/gcb/wV8="
+    }
+  },
+  "api": {
+    "getlive": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "getlivelambda",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-webtestament-dev-121408-deployment/amplify-cfn-templates/api/getlive-cloudformation-template.json",
+        "logicalId": "apigetlive"
+      },
+      "lastPushTimeStamp": "2023-10-11T16:44:53.276Z",
+      "output": {
+        "ApiName": "getlive",
+        "RootUrl": "https://wnubob3k02.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "wnubob3k02"
+      },
+      "lastPushDirHash": "Ex9L/Vzr8mUBkhuu8jZI8cGjk5o="
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-webtestament-dev-121408-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      },
+      "lastPushTimeStamp": "2023-10-11T16:44:54.146Z",
+      "output": {},
+      "lastPushDirHash": "eOH/wAXt0MCeLk1h/0K1laAF6qM="
+    }
+  }
+}
