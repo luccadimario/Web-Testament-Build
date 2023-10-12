@@ -12,16 +12,17 @@ const CryptoPrice = () => {
             API.get(myAPI, path)
             .then(response => {
                 console.log(response)
-                setData("hello world");
+                data = response;
+            
+                setData(data.map((data) =>
+                    <li>
+                        <h1 className="text-gray-600 font-semibold">
+                        {data ? (data.code + ": $" + data.rate.toFixed(2)) : <div>Unavailable</div>}
+                        </h1>
+                    </li>
+                    )
+                );
             })
-            /*setData(data.map((data) =>
-                <li>
-                    <h1 className="text-gray-600 font-semibold">
-                    {data ? (data.code + ": $" + data.rate.toFixed(2)) : <div>Unavailable</div>}
-                    </h1>
-                </li>
-                )
-            );*/
             setLoading(false);
         }
         catch(error) {
