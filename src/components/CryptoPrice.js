@@ -12,12 +12,11 @@ const CryptoPrice = () => {
             API.get(myAPI, path)
             .then(response => {
                 console.log(response)
-                data = response;
             
-                setData(data.map((data) =>
+                setData(response.map((response) =>
                     <li>
                         <h1 className="text-gray-600 font-semibold">
-                        {data ? (data.code + ": $" + data.rate.toFixed(2)) : <div>Unavailable</div>}
+                        {response ? (response.code + ": $" + response.rate.toFixed(2)) : <div>Unavailable</div>}
                         </h1>
                     </li>
                     )
