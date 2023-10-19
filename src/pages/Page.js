@@ -6,7 +6,7 @@ const Page = () => {
     const [content, setContent] = React.useState("");
 	const onContentChange = React.useCallback(evt => {
 		const sanitizeConf = {
-			allowedTags: ["b", "i", "a", "p"],
+			allowedTags: ["b", "i", "a", "p", "br"],
 			allowedAttributes: { a: ["href"] }
 		};
 
@@ -14,10 +14,15 @@ const Page = () => {
 	}, [])
 
 	return (
-		<ContentEditable
-			onChange={onContentChange}
-			onBlur={onContentChange}
-			html={content} />
+		<div className="container my-24 mx-auto md:px-6 bg-slate-300 rounded-3xl">
+    		<section className="mb-32">
+      			<div className="mx-auto max-w-[700px] md:px-3"></div>
+				<ContentEditable
+					onChange={onContentChange}
+					onBlur={onContentChange}
+					html={content} />
+			</section>
+		</div>
 	)
 }
 export default Page;

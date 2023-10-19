@@ -5,6 +5,7 @@ const navigation = [
     { name: 'Home', href: '/' },
     { name: 'Purchases', href: '/purchase' },
     { name: 'About', href: '/about' },
+    { name: 'Pages', href: '/input'}
   ]
 
 export default function Navbar() {
